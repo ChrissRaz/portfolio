@@ -1,3 +1,22 @@
+@font-face {
+	font-family: 'dash';
+	src: local('dash'), url(./assets/fonts/Dashdemo-ozJA.ttf) format('truetype');
+
+  }
+  
+  @font-face {
+	font-family: 'cursed';
+	src: local('cursed'), url(./assets/fonts/CursedTimerUlil-Aznm.ttf) format('truetype');
+
+  }
+  
+  
+  @font-face {
+	font-family: 'debug';
+	src:  url(./assets/fonts/DEBUG.woff2) format('woff2'), 
+
+  }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +29,41 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.avatar {
+	width: 150px;
+	height: 150px;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	img { width: 100%; height: auto; }
 }

@@ -1,0 +1,71 @@
+body{
+  background-color: black;
+  color: whitesmoke;
+  overflow: hidden;
+}
+
+.page, .menu {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+}
+
+.menu {
+  z-index: 10;
+  // background-image: linear-gradient(90deg, rgb(126, 146, 167) 0%, rgba(15,43,98,1) 77%, rgba(0,0,0,1) 100%);;
+  height: 85vh;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .container-mi{
+
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .menu-item{
+      font-family: monospace;
+      font-size: 40px;
+      font-weight: bold;
+      text-transform: capitalize;
+      cursor: pointer;
+      // text-align: center;
+      &.active{
+          background-image: radial-gradient(circle, rgba(0,0,0,1) 4%, rgba(6,48,130,0.21332282913165268) 17%, rgba(0,0,0,1) 84%);
+
+      }
+    }
+    
+  }
+
+}
+
+.page{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  left: 10000px;
+  animation: 1s left ease-in-out;
+  transition:all ease-in-out 500ms ;
+
+  &.intro{
+    display: flex;
+    font-size: 30px;
+    font-weight: bold;
+    // background-color: rgb(134, 125, 110);
+  }
+
+  &.active{
+    z-index: 5;
+    left: 0px;
+  }
+
+}

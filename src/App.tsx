@@ -1,11 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg';
+import './App.scss';
+import Menu from "./components/sections/menu";
+import Skills from './components/sections/skills';
+import Services from './components/sections/services';
+import Works from './components/sections/works';
+import Contact from './components/sections/contact';
+import Introduction from './components/sections/introduction';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Menu></Menu>
+      <Introduction></Introduction>
+      <Contact></Contact>
+      <Works></Works>
+      <Services></Services>
+      <Skills></Skills>
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -18,7 +31,7 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
     </div>
   );
 }
