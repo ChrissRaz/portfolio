@@ -1,124 +1,234 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+"use client";
 
-const inter = Inter({ subsets: ['latin'] })
+import ReactPageScroller from "react-page-scroller";
+import { useState, useCallback } from "react";
+import Image from "next/image";
 
-export default function Home() {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+
+import LinkedinIco from "../../public/images/linkedin.svg";
+import FacebookIco from "../../public/images/facebook.svg";
+
+import Home from "./sections/home";
+import About from "./sections/about";
+import Services from "./sections/services";
+import Portfolio from "./sections/portfolio";
+import Contact from "./sections/contact";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import type { Container, Engine } from "tsparticles-engine";
+import Particles from "react-particles";
+import { loadFull } from "tsparticles";
+
+const Page = () => {
+  const [currentPage, handlePageChange] = useState<number>(0);
+
+  let handleBeforePageChange = (number: number) => {
+    console.log(number);
+  };
+
+  //particles
+  const particlesInit = useCallback(async (engine: Engine) => {
+    console.log(engine);
+
+    // you can initialize the tsParticles instance (engine) here, adding custom shapes or presets
+    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
+    // starting from v2 you can add only the features you need reducing the bundle size
+    await loadFull(engine);
+  }, []);
+
+  const particlesLoaded = useCallback(
+    async (container: Container | undefined) => {
+      await console.log(container);
+    },
+    []
+  );
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <main className="max-h-screen relative selection:text-principal">
+      <nav className="flex justify-evenly w-full fixed z-40 top-10">
+        <div>
+          <a onClick={() => handlePageChange(0)} className="animate-pulse">
+            <FontAwesomeIcon
+              className="text-principal text-2xl"
+              icon={faCoffee}
             />
           </a>
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <ul className="flex flex-row justify-around w-3/5 justify-self-start ">
+          <li>
+            <a
+              href=""
+              className={
+                (currentPage == 0 ? "text-principal" : "text-secondaire") +
+                " font-bold"
+              }
+              onClick={() => handlePageChange(0)}
+            >
+              Home
+            </a>
+          </li>
+          <li>
+            <a
+              href=""
+              className={
+                (currentPage == 1 ? "text-principal" : "text-secondaire") +
+                " font-bold"
+              }
+              onClick={() => handlePageChange(1)}
+            >
+              About
+            </a>
+          </li>
+          <li>
+            <a
+              href=""
+              className={
+                (currentPage == 2 ? "text-principal" : "text-secondaire") +
+                " font-bold"
+              }
+              onClick={() => handlePageChange(2)}
+            >
+              Services
+            </a>
+          </li>
+          <li>
+            <a
+              href=""
+              className={
+                (currentPage == 3 ? "text-principal" : "text-secondaire") +
+                " font-bold"
+              }
+              onClick={() => handlePageChange(3)}
+            >
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a
+              href=""
+              className={
+                (currentPage == 4 ? "text-principal" : "text-secondaire") +
+                " font-bold"
+              }
+              onClick={() => handlePageChange(4)}
+            >
+              Contact
+            </a>
+          </li>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+          {/* <li>
+            <span>
+              <Image src={LinkedinIco} alt="" className="w-11 h-auto z-40" />
             </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+            <span>
+              <Image src={LinkedinIco} alt="" className="w-auto" />
             </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          </li> */}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+        </ul>
+      </nav>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`${inter.className} mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p
-            className={`${inter.className} m-0 max-w-[30ch] text-sm opacity-50`}
-          >
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <ReactPageScroller
+        pageOnChange={handlePageChange}
+        onBeforePageScroll={handleBeforePageChange}
+        customPageNumber={currentPage}
+        animationTimer={500}
+        containerHeight="100vh"
+      >
+        <Home></Home>
+
+        <About></About>
+
+        <Services></Services>
+
+        <Portfolio></Portfolio>
+
+        <Contact></Contact>
+      </ReactPageScroller>
+
+      <Particles
+        className="w-screen h-screen absolute top-0 left-0 -z-10"
+        id="tsparticles"
+        init={particlesInit}
+        loaded={particlesLoaded}
+        options={{
+          background: {
+            color: {
+              value: "transparent",
+            },
+          },
+          fpsLimit: 120,
+          interactivity: {
+            events: {
+              onClick: {
+                enable: false,
+                mode: "push",
+              },
+              onHover: {
+                enable: true,
+                mode: "repulse",
+              },
+              resize: true,
+            },
+            modes: {
+              push: {
+                quantity: 4,
+              },
+              repulse: {
+                distance: 200,
+                duration: 2,
+              },
+            },
+          },
+          particles: {
+            color: {
+              value: "#ffffff",
+            },
+            links: {
+              color: "#ffffff",
+              distance: 150,
+              enable: true,
+              opacity: 0.2,
+              width: 1,
+            },
+            collisions: {
+              enable: true,
+            },
+            move: {
+              direction: "none",
+              enable: true,
+              outModes: {
+                default: "bounce",
+              },
+              random: false,
+              speed: 1.5,
+              straight: true,
+            },
+            number: {
+              density: {
+                enable: true,
+                area: 800,
+              },
+              value: 15,
+            },
+            opacity: {
+              value: 0.1,
+            },
+            shape: {
+              type: "polygon",
+            },
+            size: {
+              value: { min: 1, max: 5 },
+            },
+          },
+          detectRetina: true,
+        }}
+      />
     </main>
-  )
-}
+  );
+};
+
+export default Page;

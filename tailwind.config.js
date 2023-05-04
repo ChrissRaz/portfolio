@@ -7,12 +7,37 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      // backgroundImage: "url('./public/images/background.png')",
+      // backgroundSize: {
+      //   "cover": "cover"
+      // }
     },
+    colors: {
+      'principal': '#cc1e30',
+      "secondaire": "#FFFFFF"
+    },
+    fontFamily: {
+      sans: ['Poppins', 'sans-serif'],
+    },
+    // animation: {
+
+    //   rotate: "rotate 2s linear infinite"
+
+    // },
+    // keyframes: {
+
+    //   rotate: {
+
+    //     from: {
+    //       transform: "rotate(0deg)"
+    //     },
+
+    //     to: {
+    //         transform: "rotate(360deg)"
+    //     }
+
+    //   }
+    // }
   },
   plugins: [],
 }
