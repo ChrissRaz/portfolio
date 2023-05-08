@@ -49,7 +49,7 @@ const Page = () => {
     <main className="max-h-screen relative selection:text-principal">
       <nav className="flex justify-evenly w-full fixed z-40 top-10">
         <div>
-          <a onClick={() => handlePageChange(0)} className="animate-pulse">
+          <a onClick={() => handlePageChange(0)} className="animate-pulse ">
             <FontAwesomeIcon
               className="text-principal text-2xl"
               icon={faCoffee}
@@ -59,64 +59,61 @@ const Page = () => {
 
         <ul className="flex flex-row justify-around w-3/5 justify-self-start ">
           <li>
-            <a
-              href=""
+            <div
+              // href=""
               className={
                 (currentPage == 0 ? "text-principal" : "text-secondaire") +
-                " font-bold"
+                " font-bold cursor-pointer"
               }
               onClick={() => handlePageChange(0)}
             >
               Home
-            </a>
+            </div>
           </li>
           <li>
-            <a
-              href=""
+            <div
+              // href=""
               className={
                 (currentPage == 1 ? "text-principal" : "text-secondaire") +
-                " font-bold"
+                " font-bold cursor-pointer "
               }
               onClick={() => handlePageChange(1)}
             >
               About
-            </a>
+            </div>
           </li>
           <li>
-            <a
-              href=""
+            <div
               className={
                 (currentPage == 2 ? "text-principal" : "text-secondaire") +
-                " font-bold"
+                " font-bold cursor-pointer"
               }
               onClick={() => handlePageChange(2)}
             >
               Services
-            </a>
+            </div>
           </li>
           <li>
-            <a
-              href=""
+            <div
               className={
                 (currentPage == 3 ? "text-principal" : "text-secondaire") +
-                " font-bold"
+                " font-bold cursor-pointer"
               }
               onClick={() => handlePageChange(3)}
             >
               Portfolio
-            </a>
+            </div>
           </li>
           <li>
-            <a
-              href=""
+            <div
               className={
                 (currentPage == 4 ? "text-principal" : "text-secondaire") +
-                " font-bold"
+                " font-bold cursor-pointer"
               }
               onClick={() => handlePageChange(4)}
             >
               Contact
-            </a>
+            </div>
           </li>
 
           {/* <li>
