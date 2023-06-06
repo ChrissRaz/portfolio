@@ -14,7 +14,7 @@ const Home = () => {
           <div className="font-semibold text-4xl my-1 text-principal">I'm <span className="">Christian</span></div>
 
           <div className="font-semibold text-lg my-2">
-            FullStack Developer Based on Madagascar
+            FullStack Developer and Project Manager Based on Madagascar
           </div>  
 
           <div className="text-sm">
