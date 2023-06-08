@@ -38,7 +38,7 @@ const About = () => {
               digital creation
             </span>{" "}
             and specifically IT <br />
-            development, that's why I can help a company or an <br />
+            development, that &apos s why I can help a company or an <br />
             entrepreneur to counter their projects.
             <br />I specialized in{" "}
             <span className="text-principal font-semibold">
