@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import axios, {isCancel, AxiosError} from 'axios';
-
+import axios, { isCancel, AxiosError } from "axios";
 
 import {
   faContactBook,
@@ -11,56 +10,77 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 
+
+
 const Contact = () => {
+  
+  const [formData, SetFormData] = useState<{
+    fullName: string;
+    email: string;
+    companyName: string;
+    companyRole: string;
+    object: string;
+    message: string;
+  }>({
+    fullName: "",
+    email: "",
+    companyName: "",
+    companyRole: "",
+    object: "",
+    message: "",
+  });
 
-  const [formData, SetFormData] = useState({fullName: undefined,  email: undefined,companyName: undefined, companyRole: undefined, object: undefined, message: undefined});
+  const [emailValid, setEmailValidation] = useState<undefined | boolean>(
+    undefined
+  );
 
-  const [emailValid, setEmailValidation] = useState(true)
+  const [isSubmitted, setSubmsion] = useState<boolean>(false)
 
-  const handleSentEvent = (e:any)=> {
+  const [formStatus, setFormStatus] = useState<"SENDING"| "SENT" | "FAILED" | undefined>(undefined)
 
-    console.log("send");
+
+  const handleSentEvent = (e: any) => {
+    // console.log("send");
+    setSubmsion(true)
+
+    if (formData.fullName.trim().length!=0 && formData.fullName.trim().length!=0 && formData.email.trim().length!=0 && formData.object.trim().length!=0 && formData.message.trim().length!=0){
+
+      setFormStatus("SENDING");
+      axios
+      .post("/api/mail", formData)
+      .then(function (response) {
+        // console.log(response);
+        setFormStatus("SENT");
+      })
+      .catch(function (error) {
+        // console.log(error);
+        setFormStatus("FAILED");
+      });
+
+    }
     
-    axios.post('/api/mail',formData)
-    .then(function (response) {
-      console.log(response);
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
+  };
 
-
-  }
-
-  const handleInputChange = (e:any) => {
+  const handleInputChange = (e: any) => {
 
     let value = e.target.value;
 
-
     SetFormData({
       ...formData,
-      [e.target.name]: value
+      [e.target.name]: value,
     });
 
-    if (e.target.name=="email"){
-
-      if (/\S+@\S+\.\S+/.test(value)){
-
-        setEmailValidation(true)
-
-      }else {
-
-        setEmailValidation(false)
-
+    if (e.target.name == "email") {
+      if (/\S+@\S+\.\S+/.test(value)) {
+        setEmailValidation(true);
+      } else {
+        setEmailValidation(false);
       }
-
     }
-
-  }
+  };
 
   return (
     <section className="flex justify-around align-middle items-center h-5/6 relative">
-
       <div className="w-1/4 h-1/2">
         <h2 className="text-4xl text-principal font-extrabold">Get in touch</h2>
 
@@ -99,7 +119,6 @@ const Contact = () => {
       <div className="w-2/5">
         <form method="post">
           <div className="flex justify-between mb-2">
-
             <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-2/5 relative">
               <div>
                 <small className="text-secondaire">Full Name *</small>
@@ -115,10 +134,11 @@ const Contact = () => {
                 required
                 title="Ce champs est requis"
               />
-{/*               
-                {   formData.fullName || formData.fullName != undefined ? "" : <div className="absolute -bottom-4 ">
-                <small className="text-[10px] text-[#F70000]">Requis</small>
-              </div> } */}
+              { formData.fullName.length == 0  && isSubmitted? 
+                <div className="absolute -bottom-4 ">
+                  <small className="text-[10px] text-[#F70000]">Champs Requis</small>
+                </div> : ""
+              }
             </div>
 
             <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-2/5 relative">
@@ -134,14 +154,21 @@ const Contact = () => {
                 onChange={handleInputChange}
                 required
                 title="Ce champs est requis"
-
               />
-              <div className="absolute -bottom-4 ">
-                <small className="text-[10px] text-[#F70000]">Format email-invalide</small>
-              </div>
-              {/* <div className="absolute -bottom-4 ">
-                <small className="text-[10px] text-[#F70000]">Requis</small>
-              </div> */}
+              { emailValid == true || emailValid  == undefined || formData.email.length ==0 ? (
+                ""
+              ) : (
+                <div className="absolute -bottom-4 ">
+                  <small className="text-[10px] text-[#F70000]">
+                    Invalide ex: identifiant@domain.com
+                  </small>
+                </div>
+              )}
+              { formData.email.length == 0  && isSubmitted? 
+                <div className="absolute -bottom-4 ">
+                  <small className="text-[10px] text-[#F70000]">Champs Requis</small>
+                </div> : ""
+              }
             </div>
           </div>
 
@@ -159,7 +186,6 @@ const Contact = () => {
                 value={formData.companyName}
                 onChange={handleInputChange}
               />
-              
             </div>
 
             <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-2/5">
@@ -193,11 +219,12 @@ const Contact = () => {
               onChange={handleInputChange}
               required
               title="Ce champs est requis"
-
             />
-            <div className="absolute -bottom-4 ">
-              <small className="text-[10px] text-[#F70000]">Requis</small>
-            </div>
+              { formData.object.length == 0  && isSubmitted? 
+                <div className="absolute -bottom-4 ">
+                  <small className="text-[10px] text-[#F70000]">Champs Requis</small>
+                </div> : ""
+              }
           </div>
 
           <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-full">
@@ -214,20 +241,37 @@ const Contact = () => {
               required
               title="Ce champs est requis"
             />
-            <div className="absolute -bottom-4 ">
+              { formData.message.length == 0  && isSubmitted? 
+                <div className="absolute bottom-2 ">
+                  <small className="text-[10px] text-[#F70000]">Champs Requis</small>
+                </div> : ""
+              }
+            {/* <div className="absolute -bottom-4 ">
               <small className="text-[10px] text-[#F70000]">Requis</small>
-            </div>
+            </div> */}
+            
           </div>
 
-          <div className="bg-principal p-1 w-28 flex flex-row justify-center mt-12 text-sm cursor-pointer">
-            <a  onClick={handleSentEvent}>Send</a>
-          </div>
+          <span className="bg-principal p-1 w-28 flex flex-row justify-center mt-12 text-sm cursor-pointer">
+            <a onClick={handleSentEvent}>Send</a>
+          </span>
+          <span>
+            <div className="text-[10px]">
+              {/* En cours d'envoi */}
+              Sending...
+            </div>
+            <div className="text-[10px]">
+              Thank you for your contact, I will answer you as soon as possible : )
+            </div>
+            <div className="text-[10px] text-[#F70000]">
+              An error has occurred, please try again and if the error persists you can send me your message from the address beside
+            </div>
+
+          </span>
         </form>
       </div>
     </section>
   );
-
-
 };
 
 export default Contact;
