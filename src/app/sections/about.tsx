@@ -64,36 +64,36 @@ const About = () => {
           </div>
           <div>
             {/* My flagship frameworks are: */}
-            <div className="flex flex-row justify-between w-11/12">
+            <div className="flex flex-row justify-between w-5/6">
 
             <div className="text-principal font-semibold ">
                 {/* <span className="">*</span>
                 <span>Angular</span> */}
-                <Image src={nodejs} alt="" className="w-auto h-14" />
+                <Image src={nodejs} alt="" className="w-auto h-12" />
               </div>
 
               <div className="text-principal font-semibold ">
                 {/* <span className="">*</span>
                 <span>Angular</span> */}
-                <Image src={angular} alt="" className="w-auto h-14" />
+                <Image src={angular} alt="" className="w-auto h-12" />
               </div>
 
               <div className="text-principal font-semibold">
                 {/* <span>*</span>
                 <span>ReactJS/NextJS</span> */}
-                <Image src={react} alt="" className="w-auto h-14" />
+                <Image src={react} alt="" className="w-auto h-12" />
               </div>
 
               <div className="text-principal font-semibold">
                 {/* <span>*</span>
                 <span>ExpressJS</span> */}
-                <Image src={express} alt="" className="w-auto h-14" />
+                <Image src={express} alt="" className="w-auto h-12" />
               </div>
 
               <div className="text-principal font-semibold">
                 {/* <span>*</span>
                 <span>NestJS</span> */}
-                <Image src={nest} alt="" className="w-auto h-14" />
+                <Image src={nest} alt="" className="w-auto h-12" />
               </div>
             </div>
           </div>
