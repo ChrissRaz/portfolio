@@ -2,6 +2,9 @@ import Image from "next/image";
 
 import ImageHome from "../../../public/images/jean-christian-home.png";
 
+import { faHand} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 const Home = ({navigateToContactEvent}:any) => {
 
 
@@ -13,7 +16,9 @@ const Home = ({navigateToContactEvent}:any) => {
 
       <div className="w-1/2 flex flex-col justify-center">
         <div className=" flex flex-col ">
-          <div className="font-semibold text-4xl my-1 text-principal">{`I'm `}<span className="">Christian</span></div>
+          <div className="font-semibold text-4xl my-1 text-principal">{`I'm `}<span className="">Christian</span> <span>
+              <FontAwesomeIcon className="text-principal mr-3 animate-wave origin-bottom text-5xl" icon={faHand} />
+            </span></div>
 
           <div className="font-semibold text-lg my-2">
             FullStack Developer and Project Manager Based on Madagascar

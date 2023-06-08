@@ -144,3 +144,10 @@ body {
 
   transform: scale(1.5);
 }
+
+.carousel-container_ ul li:not(.react-multi-carousel-dot) {
+  /* display: flex;
+  justify-content: space-around;
+  flex-direction: row; */
+  padding-left: 212px;
+}

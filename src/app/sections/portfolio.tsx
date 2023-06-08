@@ -91,6 +91,7 @@ const Portfolio = () => {
         keyBoardControl={true}
         // removeArrowOnDeviceType={["tablet", "mobile"]}
         rewind
+        containerClass="carousel-container_"
         // customTransition="gelatine 1s ease-in-out"
       >
         <div className="grid grid-cols-2 gap-4 w-full justify-center content-center">
@@ -138,7 +139,7 @@ const Portfolio = () => {
             type="Marketplace"
             content="Marketplace spécialized with food. I was lead developer of the project. We had Angular, Laravel, MySQL and MeiliSearch as Tech Stack."
             imageURL_="/images/portfolio/marketplace-proxizone.png"
-            partenaire="IGY"
+            partenaire="RELIA"
             link="https://proxizone.fr"
             image={proxi}
           />

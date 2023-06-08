@@ -5,11 +5,12 @@ import ReliaLogo from "../../../public/images/relia-logo.png";
 import IGYLogo from "../../../public/images/ingenosya-logo.png";
 import GadouLogo from "../../../public/images/logo-gadou-studio.png";
 
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faServer, faCocktail, faCoffee } from "@fortawesome/free-solid-svg-icons";
+import { faServer, faCocktail, faCoffee, faSpider, faMobile , faLaptop} from "@fortawesome/free-solid-svg-icons";
 
-const Services = () => {
+const Services = ({navigateToContactEvent}:any) => {
   return (
     <section className="h-5/6 relative pb-10">
 
@@ -18,8 +19,8 @@ const Services = () => {
         {/* services */}
       <div className="flex justify-evenly h-full relative">
 
-        <div className="self-start relative pt-40">
-          <h2 className="font-bold text-principal text-2xl">WEB DEVELOPMENT</h2>
+        <div className="self-start relative pt-40  h-[600px] ">
+          <h2 className="font-bold text-principal text-2xl"><FontAwesomeIcon className="text-principal mr-3 origin-bottom text-5xl" icon={faLaptop} />WEB DEVELOPMENT</h2>
 
           <br />
 
@@ -35,6 +36,11 @@ const Services = () => {
             , as well as the integration of features to meet specific customer
             needs.
           </p>
+
+          <div className="bg-principal p-1 w-48 flex flex-row justify-center mt-12 text-lg animate-pulse absolute bottom-8">
+            <div onClick={() => navigateToContactEvent(4, "WEB_APP")} className="cursor-pointer ">{`That's what I need !`}</div>
+          </div>
+
         </div>
 
         <div className="self-center">
@@ -44,9 +50,9 @@ const Services = () => {
           />
         </div>
 
-        <div className="self-start pt-40">
+        <div className="self-start pt-40 h-[600px] relative">
           <h2 className="font-bold text-principal text-2xl">
-            MOBILE DEVELOPMENT
+          <FontAwesomeIcon className="text-principal mr-3 origin-bottom text-5xl" icon={faMobile} />  MOBILE DEVELOPMENT
           </h2>
           <br />
           <p className="w-64">
@@ -57,8 +63,14 @@ const Services = () => {
               audience on mobile platforms
             </span>
             , and to deliver a consistent, high-quality user experience.
+            Ideal for <span className="text-principal font-semibold">digital solutions</span> but also for <span className="text-principal font-semibold">business applications</span>.
           </p>
+          <div className="bg-principal p-1 w-48 flex flex-row justify-center mt-12 text-lg animate-pulse absolute bottom-8">
+            <div onClick={() => navigateToContactEvent(4, "MOBILE_APP")} className="cursor-pointer">{`That's what I need !`}</div>
+          </div>
         </div>
+
+        
 
       </div>
 

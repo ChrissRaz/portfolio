@@ -6,10 +6,7 @@ import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-
-import LinkedinIco from "../../public/images/linkedin.svg";
-import FacebookIco from "../../public/images/facebook.svg";
+import { faCoffee, faBlog} from "@fortawesome/free-solid-svg-icons";
 
 import Home from "./sections/home";
 import About from "./sections/about";
@@ -21,12 +18,27 @@ import type { Container, Engine } from "tsparticles-engine";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
 
+import {faMailReply} from "@fortawesome/free-solid-svg-icons";
+import { T_INTREST } from "@/types";
+
+
 const Page = () => {
   const [currentPage, handlePageChange] = useState<number>(0);
+
+  const [userIntrest, handleIntrest] = useState<T_INTREST>(undefined)
 
   let handleBeforePageChange = (number: number) => {
     console.log(number);
   };
+
+  let handlePageChangeWithIntrest = (pageNumber: number, intrest?: T_INTREST) => {
+
+    handleIntrest(intrest);
+
+    handlePageChange(pageNumber);
+
+
+  }
 
   //particles
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -47,12 +59,12 @@ const Page = () => {
 
   return (
     <main className="max-h-screen relative selection:text-principal">
-      <nav className="flex justify-evenly w-full fixed z-40 top-10">
+      <nav className="flex justify-evenly items-center w-full fixed z-40 top-10 ">
         <div>
           <a onClick={() => handlePageChange(0)} className="animate-pulse ">
             <FontAwesomeIcon
-              className="text-principal text-2xl"
-              icon={faCoffee}
+              className="text-principal text-4xl"
+              icon={faBlog}
             />
           </a>
         </div>
@@ -108,12 +120,18 @@ const Page = () => {
             <div
               className={
                 (currentPage == 4 ? "text-principal" : "text-secondaire") +
-                " font-bold cursor-pointer animate-pulse"
+                " font-bold cursor-pointer animate-pulse "
               }
               onClick={() => handlePageChange(4)}
             >
               Contact
+
+              <span className="pl-2">
+                <FontAwesomeIcon className="text-[#15d7d7] mr-3 animate-gelatine" icon={faMailReply} />
+              </span>
+
             </div>
+            
           </li>
 
           {/* <li>
@@ -139,11 +157,12 @@ const Page = () => {
 
         <About></About>
 
-        <Services></Services>
+        <Services navigateToContactEvent={handlePageChangeWithIntrest}></Services>
 
         <Portfolio></Portfolio>
 
-        <Contact></Contact>
+        <Contact userIntrest={userIntrest}></Contact>
+
       </ReactPageScroller>
 
       <Particles

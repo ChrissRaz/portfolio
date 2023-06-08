@@ -7,13 +7,17 @@ import {
   faAddressBook,
   faMailReply,
   faInbox,
+  faHandshake,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import { T_INTREST } from "@/types";
 
 
 
-const Contact = () => {
+const Contact = ({userIntrest}:any) => {
   
+  userIntrest = userIntrest as T_INTREST;
+
   const [formData, SetFormData] = useState<{
     fullName: string;
     email: string;
@@ -47,7 +51,7 @@ const Contact = () => {
 
       setFormStatus("SENDING");
       axios
-      .post("/api/mail", formData)
+      .post("/api/mail", {...formData, message: formData.message + " NAVIGATION: " + (userIntrest ?? "Aucun")})
       .then(function (response) {
         // console.log(response);
         setFormStatus("SENT");
@@ -82,13 +86,14 @@ const Contact = () => {
   return (
     <section className="flex justify-around align-middle items-center h-5/6 relative">
       <div className="w-1/4 h-1/2">
-        <h2 className="text-4xl text-principal font-extrabold">Get in touch</h2>
+        <h2 className="text-4xl text-principal font-extrabold">Get in touch   <FontAwesomeIcon className="text-principal ml-5 animate-wave origin-bottom text-5xl" icon={faHandshake} />
+</h2>
 
         <br />
 
         <p className="font-bold">
           Ask me questions or send me your project informations. <br /> I will
-          answer your inquiries in a few hours.
+          answer your inquiries in a few time.
         </p>
 
         <ul className="mt-20 font-light flex flex-col justify-around h-2/3 ">

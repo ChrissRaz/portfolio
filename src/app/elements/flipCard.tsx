@@ -20,12 +20,14 @@ const FlipCard = (props_:{image: StaticImageData, imageURL_: String, name: Strin
 
         <h1 className="absolute bg-principal top-0 left-0 p-1 z-1">{ props_.name + ' ('+ props_.type +')'} </h1>
 
-        { props_.partenaire == "RELIA" ? <div >
-            <Image src={ReliaLogo} alt="" className="w-auto h-6 p-2  absolute bottom-0 right-0 bg-secondaire " priority/> 
+        { props_.partenaire == "RELIA" ? <div className="p-2  absolute bottom-0 right-0 bg-secondaire" >
+            <div className="text-[6px] text-principal">Made with team</div>
+            <Image src={ReliaLogo} alt="" className="w-auto h-6  " priority/> 
         </div> : null } 
 
-        { props_.partenaire == "IGY" ? <div >
-            <Image src={IGYLogo} alt="" className="w-auto h-10 p-1  absolute bottom-0 right-0 bg-principal " priority/> 
+        { props_.partenaire == "IGY" ? <div className="p-1  absolute bottom-0 right-0 bg-principal ">
+          <div className="text-[6px] ">Made with team</div>
+            <Image src={IGYLogo} alt="" className="w-auto h-10 " priority/> 
         </div> : null } 
 
         <Image src={props_.image} alt="" className="absolute object-cover w-full h-full top-0 left-0 -z-10" />
