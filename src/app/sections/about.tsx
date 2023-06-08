@@ -45,7 +45,7 @@ const About = () => {
               web development
             </span>{" "}
             but that does not limit my <br />
-            interests for other platforms. In terms of technology, I'm more on
+            interests for other platforms. In terms of technology, I&aposm more on
             the{" "}
             <span className="text-principal font-semibold">
               Javascript/Typescript/NodeJS
