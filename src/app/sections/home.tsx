@@ -2,7 +2,9 @@ import Image from "next/image";
 
 import ImageHome from "../../../public/images/jean-christian-home.png";
 
-const Home = () => {
+const Home = ({navigateToContactEvent}:any) => {
+
+
   return (
     <section className="flex justify-between content-end align-bottom ">
       <div className="">
@@ -37,7 +39,7 @@ const Home = () => {
             </div>
           </div>
           <div className="bg-principal p-1 w-32 flex flex-row justify-center mt-12 text-lg animate-pulse">
-            <a href="">Get in touch</a>
+            <div onClick={navigateToContactEvent} className="cursor-pointer">Get in touch</div>
           </div>
         </div>
       </div>

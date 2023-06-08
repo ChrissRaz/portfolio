@@ -108,7 +108,7 @@ const Page = () => {
             <div
               className={
                 (currentPage == 4 ? "text-principal" : "text-secondaire") +
-                " font-bold cursor-pointer"
+                " font-bold cursor-pointer animate-pulse"
               }
               onClick={() => handlePageChange(4)}
             >
@@ -135,7 +135,7 @@ const Page = () => {
         animationTimer={500}
         containerHeight="100vh"
       >
-        <Home></Home>
+        <Home navigateToContactEvent={() => handlePageChange(4)}></Home>
 
         <About></About>
 
