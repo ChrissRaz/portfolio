@@ -38,15 +38,15 @@ const About = () => {
               digital creation
             </span>{" "}
             and specifically IT <br />
-            development, that &apos s why I can help a company or an <br />
-            entrepreneur to counter their projects.
+            {`development, that's why I can help a company or an <br />
+            entrepreneur to counter their projects.`}
             <br />I specialized in{" "}
             <span className="text-principal font-semibold">
               web development
             </span>{" "}
-            but that does not limit my <br />
-            interests for other platforms. In terms of technology, I&aposm more on
-            the{" "}
+            {`but that does not limit my <br />
+            interests for other platforms. In terms of technology, I'm more on
+            the`}
             <span className="text-principal font-semibold">
               Javascript/Typescript/NodeJS
             </span>{" "}

@@ -11,7 +11,7 @@ const Home = () => {
 
       <div className="w-1/2 flex flex-col justify-center">
         <div className=" flex flex-col ">
-          <div className="font-semibold text-4xl my-1 text-principal">I&aposm <span className="">Christian</span></div>
+          <div className="font-semibold text-4xl my-1 text-principal">{`I'm `}<span className="">Christian</span></div>
 
           <div className="font-semibold text-lg my-2">
             FullStack Developer and Project Manager Based on Madagascar

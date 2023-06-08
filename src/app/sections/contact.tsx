@@ -256,17 +256,9 @@ const Contact = () => {
             <a onClick={handleSentEvent}>Send</a>
           </span>
           <span>
-            <div className="text-[10px]">
-              {/* En cours d'envoi */}
-              Sending...
-            </div>
-            <div className="text-[10px]">
-              Thank you for your contact, I will answer you as soon as possible : )
-            </div>
-            <div className="text-[10px] text-[#F70000]">
-              An error has occurred, please try again and if the error persists you can send me your message from the address beside
-            </div>
-
+            { formStatus=="SENDING" ? <div className="text-[10px]"> Sending... </div> : ""}
+            { formStatus=="SENT" ?  <div className="text-[10px]"> Thank you for your contact, I will answer you as soon as possible : ) </div>: ""}
+            { formStatus=="FAILED" ? <div className="text-[10px] text-[#F70000]"> An error has occurred, please try again and if the error persists you can send me your message from the address beside </div> : ""}
           </span>
         </form>
       </div>
