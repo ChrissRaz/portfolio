@@ -10,7 +10,7 @@ import {
   faHandshake,
 } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import { T_INTREST } from "@/types";
+import { T_INTREST } from "@/app/types";
 
 
 
