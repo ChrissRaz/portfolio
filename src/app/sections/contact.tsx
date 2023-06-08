@@ -41,9 +41,9 @@ const Contact = () => {
 
   const handleSentEvent = (e: any) => {
     // console.log("send");
-    setSubmsion(true)
+    setSubmsion(true);
 
-    if (formData.fullName.trim().length!=0 && formData.fullName.trim().length!=0 && formData.email.trim().length!=0 && formData.object.trim().length!=0 && formData.message.trim().length!=0){
+    if (formData.fullName.trim().length!=0 && formData.email.trim().length!=0 && formData.object.trim().length!=0 && formData.message.trim().length!=0){
 
       setFormStatus("SENDING");
       axios
@@ -256,8 +256,8 @@ const Contact = () => {
             <a onClick={handleSentEvent}>Send</a>
           </span>
           <span>
-            { formStatus=="SENDING" ? <div className="text-[10px]"> Sending... </div> : ""}
-            { formStatus=="SENT" ?  <div className="text-[10px]"> Thank you for your contact, I will answer you as soon as possible : ) </div>: ""}
+            { formStatus=="SENDING" ? <div className="text-[10px] text-[#179cd9]"> Sending your message... </div> : ""}
+            { formStatus=="SENT" ?  <div className="text-[10px] text-[#4ECB71]"> Thank you for your contact, I will answer you as soon as possible : ) </div>: ""}
             { formStatus=="FAILED" ? <div className="text-[10px] text-[#F70000]"> An error has occurred, please try again and if the error persists you can send me your message from the address beside </div> : ""}
           </span>
         </form>
