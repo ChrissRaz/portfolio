@@ -16,11 +16,11 @@ const Home = ({navigateToContactEvent}:any) => {
       <ThreeJSTag />
     </div> */}
 
-      <div className="mt-8">
+      <div className="mt-[5%] invisible ">
         <Image src={ImageHome} alt="" className="w-auto profile-me" priority/>
       </div>
 
-      <div className="w-1/2 flex flex-col justify-center">
+      <div className="w-1/2 flex flex-col justify-center mt-[5%]">
         <div className=" flex flex-col ">
           <div className="font-semibold text-4xl my-1 text-principal">{`I'm `}<span className="">Christian</span> <span>
               <FontAwesomeIcon className="text-principal mr-3 animate-wave origin-bottom text-5xl" icon={faHand} />
@@ -54,6 +54,7 @@ const Home = ({navigateToContactEvent}:any) => {
           </div>
         </div>
       </div>
+
     </section>
   );
 };
