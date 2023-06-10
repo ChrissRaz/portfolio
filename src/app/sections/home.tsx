@@ -4,13 +4,19 @@ import ImageHome from "../../../public/images/jean-christian-home.png";
 
 import { faHand} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ThreeJSTag from "./3dscene";
 
 const Home = ({navigateToContactEvent}:any) => {
 
 
   return (
     <section className="flex justify-between content-end align-bottom ">
-      <div className="">
+
+    {/* <div className="absolute top-0 left-0 w-full h-full">
+      <ThreeJSTag />
+    </div> */}
+
+      <div className="mt-8">
         <Image src={ImageHome} alt="" className="w-auto profile-me" priority/>
       </div>
 
@@ -33,7 +39,7 @@ const Home = ({navigateToContactEvent}:any) => {
           </div>
 
           <div className="flex justify-between mt-3 w-4/5 ">
-            <div className="text-secondire bg-principal  p-1 text-sm opacity-70">
+            <div className="text-secondire bg-principal  p-1 text-sm opacity-70 min-[1400px]:text-[5px] max-[1400px]:bg-principal">
               #App Development
             </div>
             <div className="text-secondire bg-principal  p-1 text-sm opacity-70">

@@ -14,7 +14,7 @@ module.exports = {
       // }
     },
     colors: {
-      'principal': '#cc1e30',
+      'principal': '#05c4ba',
       "secondaire": "#FFFFFF"
     },
     fontFamily: {

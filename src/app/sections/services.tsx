@@ -43,12 +43,12 @@ const Services = ({navigateToContactEvent}:any) => {
 
         </div>
 
-        <div className="self-center">
+        {/* <div className="self-center">
           <FontAwesomeIcon
             className="text-principal mr-3 text-9xl opacity-50"
             icon={faCoffee}
           />
-        </div>
+        </div> */}
 
         <div className="self-start pt-40 h-[600px] relative">
           <h2 className="font-bold text-principal text-2xl">
@@ -77,9 +77,16 @@ const Services = ({navigateToContactEvent}:any) => {
       {/* companies */}
       <div className="self-center w-full flex justify-center flex-col items-center pb-20">
 
-        <h2 className="font-bold text-principal text-2xl">
-          COMPANIES THAT TRUSTED ME
+        <div className="flex justify-between items-center">
+          <div className="h-[2px] w-[100px] bg-principal"></div>
+
+          <h2 className="font-bold text-principal text-2xl mx-5">
+          THEY TRUSTED ME
         </h2>
+
+          <div className="h-[2px] w-[100px] bg-principal"></div>
+        </div>
+
 
         <br/>
 

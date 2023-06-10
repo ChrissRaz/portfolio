@@ -69,7 +69,7 @@ const About = () => {
             <div className="text-principal font-semibold ">
                 {/* <span className="">*</span>
                 <span>Angular</span> */}
-                <Image src={nodejs} alt="" className="w-auto h-12" />
+                <Image src={nodejs} alt="" className="w-auto h-16" />
               </div>
 
               <div className="text-principal font-semibold ">
