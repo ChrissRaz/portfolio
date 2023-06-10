@@ -16,7 +16,7 @@ const Home = ({navigateToContactEvent}:any) => {
       <ThreeJSTag />
     </div> */}
 
-      <div className="mt-[5%] invisible ">
+      <div className="mt-[5%] ">
         <Image src={ImageHome} alt="" className="w-auto profile-me" priority/>
       </div>
 
