@@ -39,7 +39,7 @@ const Home = ({navigateToContactEvent}:any) => {
           </div>
 
           <div className="flex justify-between mt-3 w-4/5 ">
-            <div className="text-secondire bg-principal  p-1 text-sm opacity-70 min-[1400px]:text-[5px] max-[1400px]:bg-principal">
+            <div className="text-secondire bg-principal  p-1 text-sm opacity-70 ">
               #App Development
             </div>
             <div className="text-secondire bg-principal  p-1 text-sm opacity-70">
