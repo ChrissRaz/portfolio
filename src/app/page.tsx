@@ -64,19 +64,19 @@ const Page = () => {
           <div>
             <a onClick={() => handlePageChange(0)} className="animate-pulse ">
               <FontAwesomeIcon
-                className="text-principal text-4xl"
+                className="text-principal text-2xl md:text-4xl"
                 icon={faBlog}
               />
             </a>
           </div>
 
-          <ul className="flex flex-row justify-around w-3/5 justify-self-start ">
+          <ul className="flex flex-row justify-around w-[70%] md:w-3/5 justify-self-start ">
             <li>
               <div
                 // href=""
                 className={
                   (currentPage == 0 ? "text-principal" : "text-secondaire") +
-                  " font-bold cursor-pointer"
+                  " font-bold cursor-pointer text-[11px] md:text-[16px]"
                 }
                 onClick={() => handlePageChange(0)}
               >
@@ -88,7 +88,7 @@ const Page = () => {
                 // href=""
                 className={
                   (currentPage == 1 ? "text-principal" : "text-secondaire") +
-                  " font-bold cursor-pointer "
+                  " font-bold cursor-pointer text-[11px] md:text-[16px]"
                 }
                 onClick={() => handlePageChange(1)}
               >
@@ -99,7 +99,7 @@ const Page = () => {
               <div
                 className={
                   (currentPage == 2 ? "text-principal" : "text-secondaire") +
-                  " font-bold cursor-pointer"
+                  " font-bold cursor-pointer text-[11px] md:text-[16px]"
                 }
                 onClick={() => handlePageChange(2)}
               >
@@ -110,7 +110,7 @@ const Page = () => {
               <div
                 className={
                   (currentPage == 3 ? "text-principal" : "text-secondaire") +
-                  " font-bold cursor-pointer"
+                  " font-bold cursor-pointer text-[11px] md:text-[16px]"
                 }
                 onClick={() => handlePageChange(3)}
               >
@@ -121,7 +121,7 @@ const Page = () => {
               <div
                 className={
                   (currentPage == 4 ? "text-principal" : "text-secondaire") +
-                  " font-bold cursor-pointer animate-pulse "
+                  " font-bold cursor-pointer animate-pulse text-[11px] md:text-[16px]"
                 }
                 onClick={() => handlePageChange(4)}
               >
