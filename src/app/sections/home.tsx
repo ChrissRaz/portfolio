@@ -20,14 +20,14 @@ const Home = ({navigateToContactEvent}:any) => {
         <Image src={ImageHome} alt="" className="w-auto profile-me" priority/>
       </div>
 
-      <div className="w-1/2 flex flex-col justify-center mt-[5%]">
+      <div className="w-1/2 flex flex-col justify-center mt-[5%] ">
         <div className=" flex flex-col ">
           <div className="font-semibold text-4xl my-1 text-principal">{`I'm `}<span className="">Christian</span> <span>
               <FontAwesomeIcon className="text-principal mr-3 animate-wave origin-bottom text-5xl" icon={faHand} />
             </span></div>
 
           <div className="font-semibold text-lg my-2">
-            FullStack Developer and Project Manager Based on Madagascar
+            FullStack Developer and Project Manager
           </div>  
 
           <div className="text-sm">
