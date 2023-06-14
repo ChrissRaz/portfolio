@@ -1,6 +1,8 @@
 import { Suspense } from "react";
 import "./globals.css";
 import Loading from "./loading";
+import Head from "next/head";
+import Script from "next/script";
 
 export const metadata = {
   title: "Developer web - mobile - Christian",
@@ -14,8 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <Head>
+      </Head>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-608164694"/>
+      <Script src="https://chrissraz/js/google.js"/>
+
       {/* <Suspense fallback={<Loading />}> */}
-        <body>{children}</body>
+      <body>{children}</body>
       {/* </Suspense> */}
     </html>
   );
