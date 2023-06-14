@@ -30,12 +30,8 @@ const Home = ({navigateToContactEvent}:any) => {
             FullStack Developer and Project Manager
           </div>  
 
-          <div className="text-sm">
-            Development is an art and it is an art that I master.
-            <br />
-            Contrast your projects or enrich your team with an artist.
-            <br />
-            Welcome to my portfolio
+          <div className="text-sm w-[450px]">
+            With a strong background in development, I am ready to bring my passion and expertise to your project. Contact me now to discuss your ideas and turn your vision into reality.
           </div>
 
           <div className="flex justify-between mt-3 w-4/5 ">

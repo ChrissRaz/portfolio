@@ -19,7 +19,7 @@ export default function RootLayout({
       <Head>
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-608164694"/>
-      <Script src="https://chrissraz/js/google.js"/>
+      <Script src="https://chrissraz.com/js/google.js"/>
 
       {/* <Suspense fallback={<Loading />}> */}
       <body>{children}</body>
