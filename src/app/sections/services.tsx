@@ -14,17 +14,17 @@ const Services = ({navigateToContactEvent}:any) => {
   return (
     <section className="h-5/6 relative pb-10">
 
-      <div className="bg-principal w-52 h-52 rounded-full absolute -z-20 bottom-20 right-0 opacity-50"></div>
+      <div className="bg-principal w-52  h-52 rounded-full absolute -z-20 bottom-20 right-0 opacity-50"></div>
 
         {/* services */}
-      <div className="flex justify-evenly h-full relative">
+      <div className="flex flex-col md:flex-row justify-evenly h-full relative  ml-10 md:ml-0">
 
-        <div className="self-start relative pt-40  h-[600px] ">
-          <h2 className="font-bold text-principal text-2xl"><FontAwesomeIcon className="text-principal mr-3 origin-bottom text-5xl" icon={faLaptop} />WEB DEVELOPMENT</h2>
+        <div className="self-start relative pt-0 md:pt-40  h-[260px] md:h-[600px] ">
+          <h2 className="font-bold text-principal text-[18px] md:text-2xl"><FontAwesomeIcon className="text-principal mr-3 origin-bottom text-3xl md:text-5xl" icon={faLaptop} />WEB DEVELOPMENT</h2>
 
           <br />
 
-          <p className="w-64">
+          <p className=" w-[85%] md:w-64 text-[12px] md:text-[15px]">
             Web development is an{" "}
             <span className="text-principal font-semibold">essential </span>
             service for any business or entrepreneur who wants to create an
@@ -43,19 +43,13 @@ const Services = ({navigateToContactEvent}:any) => {
 
         </div>
 
-        {/* <div className="self-center">
-          <FontAwesomeIcon
-            className="text-principal mr-3 text-9xl opacity-50"
-            icon={faCoffee}
-          />
-        </div> */}
 
-        <div className="self-start pt-40 h-[600px] relative">
-          <h2 className="font-bold text-principal text-2xl">
-          <FontAwesomeIcon className="text-principal mr-3 origin-bottom text-5xl" icon={faMobile} />  MOBILE DEVELOPMENT
+        <div className="self-start pt-0 md:pt-40 h-[250px] md:h-[600px] relative">
+          <h2 className="font-bold text-principal text-[18px] md:text-2xl">
+          <FontAwesomeIcon className="text-principal mr-3 origin-bottom  text-3xl md:text-5xl " icon={faMobile} />  MOBILE DEVELOPMENT
           </h2>
           <br />
-          <p className="w-64">
+          <p className="  w-[85%] md:w-64  text-[12px] md:text-[15px]">
             Mobile development is{" "}
             <span className="text-principal font-semibold">essential</span> for
             businesses looking to reach their target{" "}
@@ -70,8 +64,6 @@ const Services = ({navigateToContactEvent}:any) => {
           </div>
         </div>
 
-        
-
       </div>
 
       {/* companies */}
@@ -80,7 +72,7 @@ const Services = ({navigateToContactEvent}:any) => {
         <div className="flex justify-between items-center">
           <div className="h-[2px] w-[100px] bg-principal"></div>
 
-          <h2 className="font-bold text-principal text-2xl mx-5">
+          <h2 className="font-bold text-principal text-[15px] md:text-2xl mx-5">
           THEY TRUSTED ME
         </h2>
 
@@ -90,15 +82,15 @@ const Services = ({navigateToContactEvent}:any) => {
 
         <br/>
 
-        <div className="flex justify-between align-middle w-1/2 ">
+        <div className="flex justify-between align-middle w-[85%] md:w-1/2">
           <div>
-            <Image src={ReliaLogo} alt="" className="w-auto h-8 pb-2" />
+            <Image src={ReliaLogo} alt="" className="w-auto h-5 md:h-8 md:pb-2" />
           </div>
           <div>
-            <Image src={IGYLogo} alt="" className="w-auto h-24" />
+            <Image src={IGYLogo} alt="" className="w-auto h-17 md:h-24" />
           </div>
           <div>
-            <Image src={GadouLogo} alt="" className="w-auto h-10 pb-2" />
+            <Image src={GadouLogo} alt="" className="w-auto h-6 md:h-10 md:pb-2" />
           </div>
         </div>
 
