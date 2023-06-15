@@ -126,7 +126,7 @@ const Contact = ({userIntrest}:any) => {
           <div className="flex flex-col md:flex-row justify-between mb-2">
             <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-full md:w-2/5 relative">
               <div>
-                <small className="text-secondaire text-[9px]">Full Name *</small>
+                <small className="text-secondaire text-[9px] md:text-[13px]">Full Name *</small>
               </div>
 
               <input
@@ -148,7 +148,7 @@ const Contact = ({userIntrest}:any) => {
 
             <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2  w-full md:w-2/5 relative">
               <div>
-                <small className="text-secondaire">Email *</small>
+                <small className="text-secondaire text-[9px] md:text-[13px]">Email *</small>
               </div>
               <input
                 className="appearance-none bg-opacity-0 border-none w-full text-principal mr-3 py-1 px-2 leading-tight focus:outline-none  my-input"
@@ -180,7 +180,7 @@ const Contact = ({userIntrest}:any) => {
           <div className="flex justify-between mb-2">
             <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-2/5 relative">
               <div>
-                <small className="text-secondaire">Company Name</small>
+                <small className="text-secondaire text-[9px] md:text-[13px]">Company Name</small>
               </div>
 
               <input
@@ -195,7 +195,7 @@ const Contact = ({userIntrest}:any) => {
 
             <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-2/5">
               <div>
-                <small className="text-secondaire">
+                <small className="text-secondaire text-[9px] md:text-[13px]">
                   Your Role in the company
                 </small>
               </div>
@@ -212,7 +212,7 @@ const Contact = ({userIntrest}:any) => {
 
           <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-full relative mb-2">
             <div>
-              <small className="text-secondaire">Objet *</small>
+              <small className="text-secondaire text-[9px] md:text-[13px]">Objet *</small>
             </div>
 
             <input
@@ -234,7 +234,7 @@ const Contact = ({userIntrest}:any) => {
 
           <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-full">
             <div>
-              <small className="text-secondaire">Your Message *</small>
+              <small className="text-secondaire text-[9px] md:text-[13px]">Your Message *</small>
             </div>
 
             <textarea
