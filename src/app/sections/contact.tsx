@@ -84,7 +84,8 @@ const Contact = ({userIntrest}:any) => {
   };
 
   return (
-    <section className="flex flex-col md:flex-row md:justify-around mdlign-middle md:items-center h-5/6 relative top-10 md:top-0 ml-10 md:ml-0">
+    <section className="flex flex-col justify-between md:flex-row md:justify-around md:align-middle md:items-center h-5/6 relative top-16 md:top-0 ml-10 md:ml-0">
+
       <div className="w-[85%] md:w-1/4 h-1/2">
         <h2 className="text-xl md:text-4xl text-principal font-extrabold">Get in touch   <FontAwesomeIcon className="text-principal ml-5 animate-wave origin-bottom text-3xl md:text-5xl" icon={faHandshake} /></h2>
 
@@ -120,10 +121,10 @@ const Contact = ({userIntrest}:any) => {
         </ul>
       </div>
 
-      <div className="w-full md:w-2/5">
+      <div className="w-[90%] md:w-2/5">
         <form method="post">
           <div className="flex flex-col md:flex-row justify-between mb-2">
-            <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-2/5 relative">
+            <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-full md:w-2/5 relative">
               <div>
                 <small className="text-secondaire">Full Name *</small>
               </div>
@@ -145,7 +146,7 @@ const Contact = ({userIntrest}:any) => {
               }
             </div>
 
-            <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-2/5 relative">
+            <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2  w-full md:w-2/5 relative">
               <div>
                 <small className="text-secondaire">Email *</small>
               </div>

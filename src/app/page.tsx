@@ -21,6 +21,8 @@ import { loadFull } from "tsparticles";
 import {faMailReply} from "@fortawesome/free-solid-svg-icons";
 import { T_INTREST } from "@/app/types";
 import Loading from "@/app/loading";
+import ImageLogo from "../../public/images/logo.png";
+
 
 
 const Page = () => {
@@ -62,11 +64,12 @@ const Page = () => {
     <main className="max-h-screen relative selection:text-principal">
         <nav className="flex justify-evenly items-center w-full fixed z-40 top-10 ">
           <div>
-            <a onClick={() => handlePageChange(0)} className="animate-pulse ">
-              <FontAwesomeIcon
+            <a onClick={() => handlePageChange(0)} className="animate-pulse w-3">
+              {/* <FontAwesomeIcon
                 className="text-principal text-2xl md:text-4xl"
                 icon={faBlog}
-              />
+              /> */}
+              <Image src={ImageLogo} alt="logo RAZANAMIHOATRA Jean Christian développeur" className="w-8 md:w-10 cursor-pointer"/>
             </a>
           </div>
 
