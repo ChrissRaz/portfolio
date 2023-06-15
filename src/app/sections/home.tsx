@@ -43,7 +43,7 @@ const Home = ({navigateToContactEvent}:any) => {
             <div className="text-secondire text-principal bg-opacity-0 md:bg-principal md:text-secondaire  p-1 text-sm opacity-70">
               #Team Leading
             </div>
-            <div className="text-secondire text-principal bg-opacity-0 md:bg-principal   p-1 text-sm opacity-70" >
+            <div className="text-secondire text-principal bg-opacity-0 md:bg-principal md:text-secondaire  p-1 text-sm opacity-70" >
               #Project Management
             </div>
           </div>
