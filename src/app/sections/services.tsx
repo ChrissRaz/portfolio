@@ -17,7 +17,7 @@ const Services = ({navigateToContactEvent}:any) => {
       <div className="bg-principal w-52  h-52 rounded-full absolute -z-20 bottom-20 right-0 opacity-50"></div>
 
         {/* services */}
-      <div className="flex flex-col md:flex-row justify-evenly h-full relative  ml-10 md:ml-0">
+      <div className="flex flex-col md:flex-row justify-evenly h-full relative  ml-10 md:ml-0 pt-10 md:pt-0">
 
         <div className="self-start relative pt-0 md:pt-40  h-[260px] md:h-[600px] ">
           <h2 className="font-bold text-principal text-[18px] md:text-2xl"><FontAwesomeIcon className="text-principal mr-3 origin-bottom text-3xl md:text-5xl" icon={faLaptop} />WEB DEVELOPMENT</h2>

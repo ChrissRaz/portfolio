@@ -84,30 +84,29 @@ const Contact = ({userIntrest}:any) => {
   };
 
   return (
-    <section className="flex justify-around align-middle items-center h-5/6 relative">
-      <div className="w-1/4 h-1/2">
-        <h2 className="text-4xl text-principal font-extrabold">Get in touch   <FontAwesomeIcon className="text-principal ml-5 animate-wave origin-bottom text-5xl" icon={faHandshake} />
-</h2>
+    <section className="flex flex-col md:flex-row md:justify-around mdlign-middle md:items-center h-5/6 relative top-10 md:top-0 ml-10 md:ml-0">
+      <div className="w-[85%] md:w-1/4 h-1/2">
+        <h2 className="text-xl md:text-4xl text-principal font-extrabold">Get in touch   <FontAwesomeIcon className="text-principal ml-5 animate-wave origin-bottom text-3xl md:text-5xl" icon={faHandshake} /></h2>
 
         <br />
 
-        <p className="font-bold">
+        <p className="font-bold text-[13px] md:text[22px]">
           Ask me questions or send me your project informations. <br /> I will
           answer your inquiries in a few time.
         </p>
 
-        <ul className="mt-20 font-light flex flex-col justify-around h-2/3 ">
+        <ul className="mt-4 mb-2 md:mb-0 md:mt-20 font-light flex flex-col md:justify-around md:h-2/3 ">
           <li>
             <span>
               <FontAwesomeIcon className="text-principal mr-3" icon={faInbox} />
             </span>
-            <span>chrissraz22@gmail.com</span>
+            <span className="text-[12px] md:text-[16px]">chrissraz22@gmail.com</span>
           </li>
           <li>
             <span>
               <FontAwesomeIcon className="text-principal mr-3" icon={faPhone} />
             </span>
-            <span>+261 34 76 702 09</span>
+            <span className="text-[12px] md:text-[16px]" >+261 34 76 702 09</span>
           </li>
           <li>
             <span>
@@ -116,14 +115,14 @@ const Contact = ({userIntrest}:any) => {
                 icon={faAddressBook}
               />
             </span>
-            <span>Lot AV015 Ambatoroka Ambony - Antananarivo Madagascar</span>
+            <span className="text-[12px] md:text-[16px]">Lot AV015 Ambatoroka Ambony - Antananarivo Madagascar</span>
           </li>
         </ul>
       </div>
 
-      <div className="w-2/5">
+      <div className="w-full md:w-2/5">
         <form method="post">
-          <div className="flex justify-between mb-2">
+          <div className="flex flex-col md:flex-row justify-between mb-2">
             <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-2/5 relative">
               <div>
                 <small className="text-secondaire">Full Name *</small>

@@ -83,7 +83,7 @@ const Portfolio = () => {
   return (
     <section className="flex items-center align-bottom h-screen w-screen px-32 flex-wrap basis-3/12">
       <Carousel
-        className="w-full h-5/6  "
+        className="w-full h-[90%] md:h-5/6  "
         responsive={responsive}
         arrows={false}
         showDots={true}
@@ -94,7 +94,7 @@ const Portfolio = () => {
         containerClass="carousel-container_"
         // customTransition="gelatine 1s ease-in-out"
       >
-        <div className="grid grid-cols-2 gap-4 w-full justify-center content-center">
+        <div className="flex flex-col mr-20 md:grid md:grid-cols-2 md:gap-4 w-full justify-center content-center">
           <FlipCard
             name="E-TooLia"
             type="E-commerce website"
