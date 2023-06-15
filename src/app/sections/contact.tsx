@@ -126,7 +126,7 @@ const Contact = ({userIntrest}:any) => {
           <div className="flex flex-col md:flex-row justify-between mb-2">
             <div className="flex flex-col items-start border-b border-opacity-30 border-secondaire py-2 w-full md:w-2/5 relative">
               <div>
-                <small className="text-secondaire">Full Name *</small>
+                <small className="text-secondaire text-[9px]">Full Name *</small>
               </div>
 
               <input

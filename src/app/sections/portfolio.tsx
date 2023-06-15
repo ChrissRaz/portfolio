@@ -94,7 +94,7 @@ const Portfolio = () => {
         containerClass="carousel-container_"
         // customTransition="gelatine 1s ease-in-out"
       >
-        <div className="flex flex-col mr-20 md:grid md:grid-cols-2 md:gap-4 w-full justify-center content-center">
+        <div className="flex flex-col justify-around mr-20 md:grid md:grid-cols-2 md:gap-4 w-full md:justify-center md:content-center">
           <FlipCard
             name="E-TooLia"
             type="E-commerce website"
@@ -132,7 +132,7 @@ const Portfolio = () => {
           />
         </div>
 
-        <div className="grid grid-cols-2 gap-4 w-full justify-center content-center">
+        <div className="flex flex-col justify-around mr-20 md:grid md:grid-cols-2 md:gap-4 w-full md:justify-center md:content-center">
 
           <FlipCard
             name="Proxizone"

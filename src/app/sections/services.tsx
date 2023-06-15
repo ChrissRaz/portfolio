@@ -87,7 +87,7 @@ const Services = ({navigateToContactEvent}:any) => {
             <Image src={ReliaLogo} alt="" className="w-auto h-5 md:h-8 md:pb-2" />
           </div>
           <div>
-            <Image src={IGYLogo} alt="" className="w-auto h-17 md:h-24" />
+            <Image src={IGYLogo} alt="" className="w-auto h-16 md:h-24" />
           </div>
           <div>
             <Image src={GadouLogo} alt="" className="w-auto h-6 md:h-10 md:pb-2" />
