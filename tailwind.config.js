@@ -23,7 +23,7 @@ module.exports = {
     animation: {
 
       wave: "wave 2s linear infinite",
-      gelatine: "gelatine 0.5s infinite",
+      gelatine: "gelatine 1.2s infinite",
       gelatineSlow: "gelatine 1 infinite"
 
     },
