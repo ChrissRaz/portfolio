@@ -47,8 +47,8 @@ const Home = ({navigateToContactEvent}:any) => {
               #Project Management
             </div>
           </div>
-          <div className="bg-principal p-1 w-32 flex flex-row justify-center mt-12 text-lg animate-pulse">
-            <div onClick={navigateToContactEvent} className="cursor-pointer">Get in touch</div>
+          <div className="bg-principal p-1 w-32 flex flex-row justify-center mt-12 text-lg animate-gelatine">
+            <div onClick={navigateToContactEvent} className="cursor-pointer ">Get in touch</div>
           </div>
         </div>
       </div>

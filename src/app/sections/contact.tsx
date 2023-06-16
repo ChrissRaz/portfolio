@@ -91,7 +91,7 @@ const Contact = ({userIntrest}:any) => {
 
         <br />
 
-        <p className="font-bold text-[13px] md:text[22px]">
+        <p className="font-bold text-[13px] md:text-[22px]">
           Ask me questions or send me your project informations. <br /> I will
           answer your inquiries in a few time.
         </p>

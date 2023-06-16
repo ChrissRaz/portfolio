@@ -99,6 +99,9 @@ const About = () => {
               </div>
             </div>
           </div>
+          <div className="bg-principal p-1 w-52 flex flex-row justify-center mt-8 text-lg animate-gelatine ">
+            <div onClick={() => {}} className="cursor-pointer ">{`Let's work together !`}</div>
+          </div>
         </div>
       </div>
 

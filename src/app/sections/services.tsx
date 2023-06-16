@@ -37,7 +37,7 @@ const Services = ({navigateToContactEvent}:any) => {
             needs.
           </p>
 
-          <div className="bg-principal p-1 w-48 flex flex-row justify-center mt-12 text-lg animate-pulse absolute bottom-8">
+          <div className="bg-principal p-1 w-48 flex flex-row justify-center mt-12 text-lg animate-pulse absolute bottom-8 animate-gelatine">
             <div onClick={() => navigateToContactEvent(4, "WEB_APP")} className="cursor-pointer ">{`That's what I need !`}</div>
           </div>
 
@@ -59,7 +59,7 @@ const Services = ({navigateToContactEvent}:any) => {
             , and to deliver a consistent, high-quality user experience.
             Ideal for <span className="text-principal font-semibold">digital solutions</span> but also for <span className="text-principal font-semibold">business applications</span>.
           </p>
-          <div className="bg-principal p-1 w-48 flex flex-row justify-center mt-12 text-lg animate-pulse absolute bottom-8">
+          <div className="bg-principal p-1 w-48 flex flex-row justify-center mt-12 text-lg animate-pulse absolute bottom-8 animate-gelatine">
             <div onClick={() => navigateToContactEvent(4, "MOBILE_APP")} className="cursor-pointer">{`That's what I need !`}</div>
           </div>
         </div>
