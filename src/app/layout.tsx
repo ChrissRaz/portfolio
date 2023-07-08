@@ -6,6 +6,7 @@ import Script from "next/script";
 
 export const metadata = {
   title: "Developer web - mobile - Christian",
+  
   description: "Obtenez l'expertise dont vous avez besoin pour réaliser votre projet de développement web et mobile. Profitez également de services de gestion de projets numériques efficaces.",
 };
 
