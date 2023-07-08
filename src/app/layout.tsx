@@ -17,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Head>
+        <meta name="description" content="Obtenez l'expertise dont vous avez besoin pour réaliser votre projet de développement web et mobile. Profitez également de services de gestion de projets numériques efficaces." />
       </Head>
       <Script async src="https://www.googletagmanager.com/gtag/js?id=AW-608164694"/>
       <Script src="https://chrissraz.com/js/google.js"/>

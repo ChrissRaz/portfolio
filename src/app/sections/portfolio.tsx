@@ -81,7 +81,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className="flex items-center align-bottom h-screen w-screen px-32 flex-wrap basis-3/12">
+    <section className="flex items-center align-bottom h-screen w-screen px-32 flex-wrap ">
       <Carousel
         className="w-full h-[90%] md:h-5/6  "
         responsive={responsive}

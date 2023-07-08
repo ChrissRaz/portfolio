@@ -13,7 +13,7 @@ const FlipCard = (props_:{image: StaticImageData, imageURL_: String, name: Strin
   
 
   return (
-    <div className="flip w-[400px] md:w-[400px]">
+    <div className="flip w-[40%] md:w-[400px]">
 
       <div className={ "front  bg-center bg-no-repeat  bg-clip-content relative rounded-md" }>
 
