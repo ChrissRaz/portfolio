@@ -69,16 +69,6 @@ export default function RootLayout({
     <html lang="en">
       <Head>
 
-        <link
-          href="https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600,700,800&display=optional"
-          rel="stylesheet"
-        />
-
-        <link
-          href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700,900&display=optional"
-          rel="stylesheet"
-        />
-
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={addJsonLd()}
