@@ -256,6 +256,18 @@ const Contact = () => {
 const Home = () => {
   return (
     <>
+
+<div className="loading" style={{ display: "none" }}>
+      <div className="gooey">
+        <span className="dot"></span>
+        <div className="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+    
       {/* nav */}
       <nav className="navbar navbar-expand-lg nav-scroll">
         <div className="container">
@@ -393,7 +405,7 @@ const Home = () => {
                   {`I am passionate about everything that is digital creation and specifically ITdevelopment, that's why I can help a company or an entrepreneur to counter their projects.I specialized in web development but that does not limit my interests for other platforms. In terms of technology, I'm more on the Javascript/Typescript/NodeJS environment.`}
                 </p>
 
-                <a href="CV.pdf" className="butn butn-bord" target="_blank">
+                <a href="/download/CV_Jean_Christian 2023.pdf" download className="butn butn-bord" target="_blank">
                   <span>Download CV</span>
                 </a>
                 <a href="#0" className="butn butn-light" data-scroll-nav="5">
