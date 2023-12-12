@@ -38,6 +38,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  
   function addJsonLd() {
     return {
       __html: `{
@@ -74,6 +75,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={addJsonLd()}
           key="page-jsonld"
         />
+        
       </Head>
 
       {/* <Suspense fallback={<Loading />}> */}

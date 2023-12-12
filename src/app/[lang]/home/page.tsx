@@ -1,27 +1,31 @@
 "use client";
 
-import "../../../public/css/plugins.css";
-import "../../../public/css/style.css";
-// import "../../../public/css/cstm.css";
+import "../../../../public/css/plugins.css";
+import "../../../../public/css/style.css";
+// import "../../../../public/css/cstm.css";
 
-import LogoLight from "../../../public/image/logo-light.png";
-import Hero from "../../../public/image/hero.png";
+import LogoLight from "../../../../public/image/logo-light.png";
+import Hero from "../../../../public/image/hero.png";
 
-import Portfolio1 from "../../../public/image/portfolio/1.webp";
-import Portfolio2 from "../../../public/image/portfolio/2.webp";
-import Portfolio3 from "../../../public/image/portfolio/3.png";
-import Portfolio4 from "../../../public/image/portfolio/4.jpg";
-import Portfolio5 from "../../../public/image/portfolio/5.png";
-import Portfolio6 from "../../../public/image/portfolio/6.png";
-import Portfolio7 from "../../../public/image/portfolio/7.png";
-import Portfolio8 from "../../../public/image/portfolio/8.jpg";
+import Portfolio1 from "../../../../public/image/portfolio/1.webp";
+import Portfolio2 from "../../../../public/image/portfolio/2.webp";
+import Portfolio3 from "../../../../public/image/portfolio/3.png";
+import Portfolio4 from "../../../../public/image/portfolio/4.jpg";
+import Portfolio5 from "../../../../public/image/portfolio/5.png";
+import Portfolio6 from "../../../../public/image/portfolio/6.png";
+import Portfolio7 from "../../../../public/image/portfolio/7.png";
+import Portfolio8 from "../../../../public/image/portfolio/8.jpg";
 
-import commingSoon from "../../../public/image/comming-soon.jpg";
+import commingSoon from "../../../../public/image/comming-soon.jpg";
 
 import Image from "next/image";
 import { useState } from "react";
-import { T_INTREST } from "../types";
 import axios from "axios";
+import useTranslation from "next-translate/useTranslation";
+import Footer from "@/app/elements/footer";
+import Header_ from "@/app/elements/header";
+
+
 
 const Contact = () => {
   const [formData, SetFormData] = useState<{
@@ -153,15 +157,18 @@ const Contact = () => {
                         placeholder="Name"
                         value={formData.fullName}
                         onChange={handleInputChange}
-                
                         required
                       />
-                      { formData.fullName.length == 0  && isSubmitted? 
+                      {formData.fullName.length == 0 && isSubmitted ? (
                         <div className="absolute -bottom-4 ">
-                          <small className="text-[10px] text-[#F70000]">Champs Requis</small>
-                        </div> : ""
-                      }
-                      </div>
+                          <small className="text-[10px] text-[#F70000]">
+                            Champs Requis
+                          </small>
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                    </div>
                   </div>
                   <div className="col-md-6">
                     <div className="form-group">
@@ -175,7 +182,9 @@ const Contact = () => {
                         required
                       />
 
-                      { emailValid == true || emailValid  == undefined || formData.email.length ==0 ? (
+                      {emailValid == true ||
+                      emailValid == undefined ||
+                      formData.email.length == 0 ? (
                         ""
                       ) : (
                         <div className="absolute -bottom-4 ">
@@ -184,7 +193,6 @@ const Contact = () => {
                           </small>
                         </div>
                       )}
-
                     </div>
                   </div>
                   <div className="col-md-12">
@@ -198,11 +206,15 @@ const Contact = () => {
                         onChange={handleInputChange}
                         required
                       />
-                      { formData.object.length == 0  && isSubmitted? 
+                      {formData.object.length == 0 && isSubmitted ? (
                         <div className="absolute -bottom-4 ">
-                          <small className="text-[10px] text-[#F70000]">Champs Requis</small>
-                        </div> : ""
-                      }
+                          <small className="text-[10px] text-[#F70000]">
+                            Champs Requis
+                          </small>
+                        </div>
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </div>
                   <div className="col-md-12">
@@ -217,16 +229,24 @@ const Contact = () => {
                         required
                       ></textarea>
 
-                        { formData.message.length == 0  && isSubmitted? 
-                          <div className="absolute bottom-2 ">
-                            <small className="text-[10px] text-[#F70000]">Champs Requis</small>
-                          </div> : ""
-                        }
+                      {formData.message.length == 0 && isSubmitted ? (
+                        <div className="absolute bottom-2 ">
+                          <small className="text-[10px] text-[#F70000]">
+                            Champs Requis
+                          </small>
+                        </div>
+                      ) : (
+                        ""
+                      )}
                     </div>
                   </div>
 
                   <div className="col-md-12 text-center">
-                    <button onClick={handleSentEvent} type="button" className="butn butn-bg disabled">
+                    <button
+                      onClick={handleSentEvent}
+                      type="button"
+                      className="butn butn-bg disabled"
+                    >
                       <span>Send Message</span>
                     </button>
                   </div>
@@ -254,20 +274,22 @@ const Contact = () => {
 };
 
 const Home = () => {
+  
+  const { t, lang } = useTranslation("common");
+
   return (
     <>
-
-<div className="loading" style={{ display: "none" }}>
-      <div className="gooey">
-        <span className="dot"></span>
-        <div className="dots">
-          <span></span>
-          <span></span>
-          <span></span>
+      <div className="loading" style={{ display: "none" }}>
+        <div className="gooey">
+          <span className="dot"></span>
+          <div className="dots">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </div>
-    </div>
-    
+
       {/* nav */}
       <nav className="navbar navbar-expand-lg nav-scroll">
         <div className="container">
@@ -295,7 +317,7 @@ const Home = () => {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <a className="nav-link" href="#" data-scroll-nav="0">
-                  Home
+                  {t("menu_home")}
                 </a>
               </li>
               <li className="nav-item">
@@ -329,59 +351,13 @@ const Home = () => {
       </nav>
 
       {/* banner */}
-      <header
-        className="header valign bg-img position-re"
-        data-scroll-index="0"
-        data-stellar-background-ratio="0.5"
-        data-overlay-dark="4"
-        data-background="/image/bg.png"
-        style={{
-          backgroundImage: "url('/image/bg.png')",
-          backgroundPosition: "-25px 0px",
-        }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="full-width text-center caption mt-50">
-              <h2>Welcome!</h2>
-              <h1 className="cd-headline push">
-                <span className="blc">I am</span>
-                <span className="cd-words-wrapper" style={{ width: "157px" }}>
-                  <b className="is-hidden">R. Jean Christian</b>
-                  <b className="is-visible">Project Manager</b>
-                  <b className="is-hidden">FullStack Developer</b>
-                  <b className="is-hidden">Digital Marketing</b>
-                </span>
-              </h1>
-
-              <div className="social mt-30">
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/chrissraz/"
-                >
-                  <i className="icofont icofont-brand-linkedin"></i>
-                </a>
-
-                <a href="https://web.facebook.com/jchrissraz/">
-                  <i className="icofont icofont-social-facebook"></i>
-                </a>
-
-                <a
-                  target="_blank"
-                  href="https://www.instagram.com/razanamihoatra/"
-                >
-                  <i className="icofont icofont-social-instagram"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
+      <Header_/>
 
       {/* hero */}
       <section
         className="hero section-padding position-re"
         data-scroll-index="1"
+        id="hero_"
       >
         <div className="container">
           <div className="row">
@@ -405,7 +381,12 @@ const Home = () => {
                   {`I am passionate about everything that is digital creation and specifically ITdevelopment, that's why I can help a company or an entrepreneur to counter their projects.I specialized in web development but that does not limit my interests for other platforms. In terms of technology, I'm more on the Javascript/Typescript/NodeJS environment.`}
                 </p>
 
-                <a href="/download/CV_Jean_Christian 2023.pdf" download className="butn butn-bord" target="_blank">
+                <a
+                  href="/download/CV_Jean_Christian_2023_.pdf"
+                  download
+                  className="butn butn-bord"
+                  target="_blank"
+                >
                   <span>Download CV</span>
                 </a>
                 <a href="#0" className="butn butn-light" data-scroll-nav="5">
@@ -774,7 +755,7 @@ const Home = () => {
       <Contact />
 
       {/* footer */}
-      <footer className="text-center bg-dark position-re">
+      {/* <footer className="text-center bg-dark position-re">
         <div className="container">
           <a className="logo" href="#">
             <Image src={LogoLight} alt="logo" />
@@ -810,7 +791,8 @@ const Home = () => {
         >
           <path d="M1920,0c0,0-109.246,46.107-316.333,67.334C1343.5,94,1137.095,77.238,999.167,67.5C854,57.25,637.662,24.697,541.709,18.834C375.334,8.666,147,11,0,37.875V0H1920L1920,0z"></path>
         </svg>
-      </footer>
+      </footer> */}
+      <Footer/>
     </>
   );
 };
