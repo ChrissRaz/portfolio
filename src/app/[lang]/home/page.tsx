@@ -317,7 +317,7 @@ const Home = () => {
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <a className="nav-link" href="#" data-scroll-nav="0">
-                  {t("menu_home")}
+                  Home
                 </a>
               </li>
               <li className="nav-item">
