@@ -33,32 +33,32 @@ const Nav_ = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="nav-link" href="#" data-scroll-nav="0">
+                <a className="nav-link" href="/fr/home#hero_" data-scroll-nav="0">
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" data-scroll-nav="1">
+                <a className="nav-link" href="/fr/home#about_" data-scroll-nav="1">
                   About
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" data-scroll-nav="2">
+                <a className="nav-link" href="/fr/home#services_" data-scroll-nav="2">
                   Services
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" data-scroll-nav="3">
+                <a className="nav-link" href="/fr/home#portfolio_" data-scroll-nav="3">
                   Portfolio
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" data-scroll-nav="4">
+                <a className="nav-link" href="/fr/blog#hero_" data-scroll-nav="4">
                   Blog
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#" data-scroll-nav="5">
+                <a className="nav-link" href="/fr/home" data-scroll-nav="5">
                   Contact
                 </a>
               </li>
