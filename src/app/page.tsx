@@ -7,7 +7,7 @@ import { redirect } from 'next/navigation'
 
 const Page = () => {
 
-  redirect("/fr/home");
+  redirect("/en/home");
   
 };
 

@@ -28,7 +28,7 @@ const Blog = () => {
                     <div className="row">
                         <div className="full-width text-center caption mt-50">
                             <h2>My Blog</h2>
-                            <a href="/fr/home">Home</a>/<a href="#">Blog</a>
+                            <a href="/en/home">Home</a>/<a href="#">Blog</a>
                         </div>
                     </div>
                 </div>
