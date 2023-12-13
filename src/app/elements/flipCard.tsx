@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import ReliaLogo from "../../../public/images/relia-logo.png";
 import IGYLogo from "../../../public/images/ingenosya-logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faExternalLink } from "@fortawesome/enee-solid-svg-icons";
+import { faExternalLink } from "@fortawesome/free-solid-svg-icons";
 
 import edbm from"../../../public/images/portfolio/edbm-website.png";
 import { ReactElement } from "react";
